@@ -2,24 +2,26 @@ import React, {useEffect, useState} from "react";
 import "./App.css";
 import axios from 'axios';
 import CardContainer from './components/CardContainer'
-import Card from './components/Card'
+
 
 
 function App() {
 
-  // const [title, setTitle]= useState('0');
+
   const [data, setData]= useState({});
+  //console.log('App', data)
 
-  // useEffect(()=>{
-  //   axios.get('https://api.nasa.gov/planetary/apod?api_key=RboUaHZgXFAYDxkc1Req6H9KUWOUhFU21siaRiaJ')
+  useEffect(()=>{
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=RboUaHZgXFAYDxkc1Req6H9KUWOUhFU21siaRiaJ')
+    .then(res =>{
+        setData(res.data)
+    }); 
   //   .then(res =>{
-  //       console.log('res.data', res.data);
-  //       // setTitle(res.data.title)
-  //       // setExplanation(res.data.explanation)
-  //       setData(res.data)
-  //   }); 
+  //     this.setData({
+  //         data: [res.data]})
+  // }); 
 
-  // }, [])
+  }, [])
 
   
   
@@ -28,7 +30,7 @@ function App() {
   return (
     <div className="App">
 <div className="container">
-      <CardContainer />
+      <CardContainer data={data} />
 
       {/* {data ? <Card title={data.title}
       url= {data.url}
