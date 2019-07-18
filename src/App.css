@@ -1,3 +1,6 @@
+body{
+  color: white;
+}
 .App {
   text-align: center;
 }
@@ -24,17 +27,21 @@
 }
 
 .infoSection{
-  background: yellow;
+  background: rgb(196, 196, 134);
   width: 300px;
-  height: 300px;
+  height: 50%;
   margin: 30px;
+  /* margin-bottom: 40%; */
   padding: 15px;
+  border-radius: 20px;
+  color: red;
+  text-align: left;
+  overflow: scroll;
 
 }
 
 .container{
   background: aquamarine;
-  /* background: url(/img/spacex--p-KCm6xB9I-unsplash.jpg); */
   background-size: cover;
   height: 100vh;
 }
@@ -42,6 +49,21 @@
 .nasa-data{
   background: salmon;
 }
+
+li{
+  list-style-type: none;
+}
+
+.center{
+  align-items: center;
+}
+
+svg{
+  display: block;
+  margin: auto;
+}
+
+
 
 @keyframes App-logo-spin {
   from {
@@ -51,3 +73,4 @@
     transform: rotate(360deg);
   }
 }
+
