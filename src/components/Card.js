@@ -2,6 +2,7 @@ import React from "react";
 import Loader from 'react-loader-spinner';
 
 
+
 function Card(props){
     // console.log(props)
     const info= props.data;

@@ -1,5 +1,7 @@
 import React from 'react';
 import Card from './Card'
+import 'semantic-ui-css/semantic.min.css'
+import {Card as SemanticCard} from 'semantic-ui-css';
 
 
 
@@ -17,7 +19,9 @@ function CardContainer(props){
     return  ( <div className="container"> 
     <div style={divStyle}>
         <h2>Nasa Photo of The Day</h2>
+        <SemanticCard className="photo-card">
      <Card data={props.data}/>
+     </SemanticCard>
         </div>
         
     </div>)
